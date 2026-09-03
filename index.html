@@ -7,7 +7,7 @@
 <meta name="description" content="ブロードウェイ作品のライセンスを取得し、英語上演・日本語字幕でお届けする国際色豊かなミュージカルシアターカンパニー。出張公演・出張レッスン・協賛のご相談も承っています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Fraunces:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -261,19 +261,55 @@
       <span class="tag">General</span>
       <h3>公演・チケットについて</h3>
       <p>公演スケジュールやチケットに関するお問い合わせはこちらから。</p>
-      <a class="service-link" style="color:#e3cd9a; border-color:#e3cd9a;" href="#">お問い合わせフォームへ</a>
+      <details class="inquiry">
+        <summary>お問い合わせフォームを開く</summary>
+        <form class="inquiry-form" data-form="general" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="【一般】公演・チケットについてのお問い合わせ">
+          <input type="hidden" name="category" value="一般のお客様（公演・チケット）">
+          <label>お名前<span class="req">必須</span><input type="text" name="name" required></label>
+          <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required></label>
+          <label>お問い合わせ内容<span class="req">必須</span><textarea name="message" rows="4" required placeholder="ご希望の公演日・お問い合わせ内容など"></textarea></label>
+          <button type="submit" class="btn btn-primary form-submit">送信する</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </details>
     </div>
     <div class="contact-card">
       <span class="tag">Business</span>
       <h3>学校・施設のご担当者様</h3>
       <p>出張公演・ラウンジライブ・貸切公演のご相談、資料請求はこちら。</p>
-      <a class="service-link" style="color:#e3cd9a; border-color:#e3cd9a;" href="#">法人向けフォームへ</a>
+      <details class="inquiry">
+        <summary>法人向けフォームを開く</summary>
+        <form class="inquiry-form" data-form="business" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="【法人】出張公演・貸切公演のご相談">
+          <input type="hidden" name="category" value="学校・施設のご担当者様（出張公演・貸切）">
+          <label>ご担当者名<span class="req">必須</span><input type="text" name="name" required></label>
+          <label>学校名・施設名<span class="opt">任意</span><input type="text" name="organization"></label>
+          <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required></label>
+          <label>電話番号<span class="opt">任意</span><input type="tel" name="phone"></label>
+          <label>ご相談内容<span class="req">必須</span><textarea name="message" rows="4" required placeholder="出張公演の希望日・場所・人数規模など"></textarea></label>
+          <button type="submit" class="btn btn-primary form-submit">送信する</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </details>
     </div>
     <div class="contact-card">
       <span class="tag">Sponsorship</span>
       <h3>協賛・機材協力について</h3>
       <p>機材のご提供・協賛にご興味をお持ちの企業様はこちらから。</p>
-      <a class="service-link" style="color:#e3cd9a; border-color:#e3cd9a;" href="#">協賛フォームへ</a>
+      <details class="inquiry">
+        <summary>協賛フォームを開く</summary>
+        <form class="inquiry-form" data-form="sponsor" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="【協賛】機材協力・協賛のご相談">
+          <input type="hidden" name="category" value="協賛・機材協力について">
+          <label>ご担当者名<span class="req">必須</span><input type="text" name="name" required></label>
+          <label>企業名・団体名<span class="opt">任意</span><input type="text" name="organization"></label>
+          <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required></label>
+          <label>ご協力内容<span class="req">必須</span><textarea name="message" rows="4" required placeholder="ご提供いただける機材・協賛の形など"></textarea></label>
+          <button type="submit" class="btn btn-primary form-submit">送信する</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </details>
     </div>
   </div>
 </section>
@@ -290,6 +326,6 @@
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
