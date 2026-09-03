@@ -202,6 +202,8 @@
   footer{background:#0d0e12; color:var(--muted); padding:44px 0; font-size:13px;}
   .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
   .foot-social{display:flex; gap:16px;}
+  .foot-social a{color:var(--muted); transition:color .2s ease;}
+  .foot-social a:hover{color:var(--gold-soft);}
 
   /* ---------- LOGO IMAGE ---------- */
   .logo-mark{height:34px; width:auto; filter:invert(1) brightness(1.15); display:block;}
